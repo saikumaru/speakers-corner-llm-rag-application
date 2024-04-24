@@ -79,6 +79,7 @@ OpenAI - `gpt-3.5-turbo`
 
 
 8. cd to correct folder having dockerfile, and build the image
+
 `docker build . -t speakerscornerregistry.azurecr.io/openai`
 
 takes about 100s-200s
@@ -88,16 +89,15 @@ Then push the image to registry with tag
 `docker push <registry name created on Azure>.azurecr.io/openai:latest`
 
 
-9. On container page pick the specific registry, image and tag of the image just pushed.
+9. On container options page pick the specific registry, image and tag of the image just pushed.
 Key in your environment variables manually while creating the conatiner app, i.e. your openAi key and its value.
 
 
 11. On bindings create and select your two sidecars qdrant and redis
 
-12. In the network tab while creating the ACA check `"Enable ingress"`, and `"Traffic from anywhere"` to allow receiving traffic from internet when you open the container app link.
-- Update the target port to `5000` as this is the port where the flask api is being served.
+12. In the network tab while creating the ACA check `"Enable ingress"`, and `"Traffic from anywhere"` to allow receiving traffic from internet when you open the container app link. Update the target port to `5000` as this is the port where the flask api is being served.
 
-13. Once you hit `Create`. You can check status of you deployment under "Revisons and replicas" menu.
+13. Once you hit `Create`. You can check status of you deployment under `"Revisons and replicas"` menu.
 
 14. Once the app is ready, you can access the bot page. The link would be similar to below
 https://{container app name}.{random word}.{region}.azurecontainerapps.io/openai
