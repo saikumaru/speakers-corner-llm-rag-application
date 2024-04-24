@@ -10,7 +10,7 @@ Redis(Container)
 Python Flask
 
 ## LLM
-OpenAI - gpt-3.5-turbo
+OpenAI - `gpt-3.5-turbo`
 
 
 
@@ -31,12 +31,17 @@ OpenAI - gpt-3.5-turbo
 3. Python 3.9
 4. Create a `.env` file under `src` folder with below data
 
- >   OPENAI_API_KEY="<your open ai key only used for local run>"
- >   QDRANT_HOST="localhost"
- >   QDRANT_PORT="6333"
- >   REDIS_HOST="localhost"
- >   REDIS_PORT="6379"
- >   REDIS_PASSWORD="None"
+>OPENAI_API_KEY="<your open ai key only used for local run>"
+>
+>QDRANT_HOST="localhost"
+>
+>QDRANT_PORT="6333"
+>
+>REDIS_HOST="localhost"
+>
+>REDIS_PORT="6379"
+>
+>REDIS_PASSWORD="None"
 
 
 # On CMD line
@@ -51,7 +56,7 @@ OpenAI - gpt-3.5-turbo
 4. Run Redis docker container
 `docker run --name redis -d -p 6379:6379 redis`
 
-5. Run flask server and check locally if all works(from src folder)
+5. Run flask server and check locally if all works(from src folder). Access the app from `localhost:5000/openai`.
 `python flask_rag_llm_openai_hf.py`
 
 
@@ -67,19 +72,25 @@ OpenAI - gpt-3.5-turbo
 7. Login to Azure on your command line and push your image to registry
 
 `az login`
+
 `az account set --subscription <your specific subscription>`
+
 `az acr login -n <registry name created on Azure>`
 
 
 8. cd to correct folder having dockerfile, and build the image
 `docker build . -t speakerscornerregistry.azurecr.io/openai`
+
 takes about 100s-200s
 
 Then push the image to registry with tag
+
 `docker push <registry name created on Azure>.azurecr.io/openai:latest`
+
 
 9. On container page pick the specific registry, image and tag of the image just pushed.
 Key in your environment variables manually while creating the conatiner app, i.e. your openAi key and its value.
+
 
 11. On bindings create and select your two sidecars qdrant and redis
 
@@ -89,7 +100,7 @@ Key in your environment variables manually while creating the conatiner app, i.e
 13. Once you hit `Create`. You can check status of you deployment under "Revisons and replicas" menu.
 
 14. Once the app is ready, you can access the bot page. The link would be similar to below
-https://<container app name>.<random word>.<region>.azurecontainerapps.io/openai
+https://{container app name}.{random word}.{region}.azurecontainerapps.io/openai
 
 
 
