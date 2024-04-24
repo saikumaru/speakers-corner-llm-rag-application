@@ -1,4 +1,4 @@
-# How to deploy a flask RAG application on Azure, specifically Azure Container App service- A serverless enginer.
+# How to deploy a flask RAG application on Azure, specifically Azure Container App service- A serverless engine.
 
 ## Embeddings storage
 QdrantDB(Container)
