@@ -104,10 +104,11 @@ https://{container app name}.{random word}.{region}.azurecontainerapps.io/openai
 
 
 
-# Substitutes for Serverless GPU for inferencing purpose
-Replicate
-Runpod
-Huggingface
+### Substitutes for Serverless GPU for inferencing purpose
+
+- Replicate
+- Runpod
+- Huggingface
 
 
 This code release is being done as part of speakers corner session that was conducted on 16th April 2024
