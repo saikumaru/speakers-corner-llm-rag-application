@@ -10,7 +10,7 @@ Redis(Container)
 Python Flask
 
 ## LLM
-OpenAI GPT 3.4
+OpenAI - gpt-3.5-turbo
 
 
 
