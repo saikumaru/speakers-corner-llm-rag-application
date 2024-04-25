@@ -1,4 +1,6 @@
-# How to deploy a flask RAG application on Azure, specifically Azure Container App service- A serverless engine.
+# Architecting Scalable AI RAG Systems
+How to deploy a flask RAG application on Azure, specifically Azure Container App service- A serverless engine.
+
 
 ## Embeddings storage
 QdrantDB(Container)
@@ -115,3 +117,6 @@ This code release is being done as part of speakers corner session that was cond
 https://www.landing.ciklum.com/sc-architecting-scalable-ai
 
 - [Ciklum](https://www.ciklum.com/)
+
+![Ciklum speakers corner](group.png "RAG based GenAI application")
+
